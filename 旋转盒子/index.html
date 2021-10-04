@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>旋转盒子</title>
+		<style>
+			body{
+				perspective: 1000px;
+			}
+			.box{
+				transform-style: preserve-3d;
+				width:400px;
+				height:400px;
+				position: relative;
+		        top:180px;
+				left:50%;
+				margin-left: -200px;
+			/* 	border: 1px solid black; */
+			 	transform: rotateX(30deg) rotatez(50deg); 
+				animation: xz 3s linear infinite; 
+				
+			}
+			.a{
+				width:200px;
+				height:200px;
+				background-color: aqua;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				transform: translateZ(100px);
+			}
+			.a1{
+				width:200px;
+				height:200px;
+				background-color: antiquewhite;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				transform: translateZ(-100px);
+			}
+			.a2{
+				width:200px;
+				height:200px;
+				background-color: darkblue;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				transform: rotateX(90deg) translatez(100px);
+			}
+			.a3{
+				width:200px;
+				height:200px;
+				background-color: firebrick;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				transform: rotateX(90deg) translatez(-100px);
+			}
+			.a4{
+				width:200px;
+				height:200px;
+				background-color: darkgoldenrod;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+			    transform: rotatey(270deg) translatez(100px); 
+			}
+			.a5{
+				width:200px;
+				height:200px;
+				background-color: cornflowerblue;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+			    transform: rotatey(270deg) translatez(-100px); 
+			}
+			/* 外层 */
+			.b{
+				width:300px;
+				height:300px;
+				background-color: gainsboro;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				transform: translateZ(150px) translateY(-50px) translateX(-50px);
+				opacity: .8;
+				animation: py1 3s linear infinite alternate-reverse;
+				transform-style: preserve-3d;
+			}
+			.b1{
+				width:300px;
+				height:300px;
+				background-color: gainsboro;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				transform: translateZ(-150px) translateY(-50PX) translateX(-50px);
+				opacity: .8;
+				animation: py2 3s linear infinite alternate-reverse;
+				transform-style: preserve-3d;
+			}
+			.b2{
+				width:300px;
+				height:300px;
+				background-color: gainsboro;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				transform: rotateX(90deg) translatez(200px) translateX(-50px);
+				opacity: .8;
+				animation: py3 3s linear infinite alternate-reverse;
+				transform-style: preserve-3d;
+			}
+			.b3{
+				width:300px;
+				height:300px;
+				background-color: gainsboro;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+				transform: rotateX(269deg) translatez(-200px) translateX(-50px);
+				opacity: .8;
+				animation: py4 3s linear infinite alternate-reverse;
+				transform-style: preserve-3d;
+			}
+			.b4{
+				width:300px;
+				height:300px;
+				background-color: gainsboro;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+			    transform: rotatey(270deg) translatez(200px) translateY(-50px); 
+				opacity: .8;
+				animation: py5 3s linear infinite alternate-reverse;
+				transform-style: preserve-3d; 
+			}
+			.b5{
+				width:300px;
+				height:300px;
+				background-color: gainsboro;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin-top: -100px;
+				margin-left: -100px;
+			    transform: rotatey(270deg) translatez(-100px) translateY(-50px); 
+				opacity: .8;
+				animation: py6 3s linear infinite alternate-reverse;
+				transform-style: preserve-3d;
+			}
+			@keyframes  xz{
+				from{ 
+					transform: rotatex(0deg) rotateY(0deg);
+					
+				
+				}
+				to{
+					transform: rotatex(360deg) rotateY(360deg);
+				}
+			}
+			@keyframes py1{
+				from{
+					transform: translateZ(150px) translateY(-50px) translateX(-50px);
+				}
+				to{
+					transform: translateZ(200px) translateY(-50px) translateX(-50px);
+				}
+			}
+			@keyframes py2{
+				from{
+					transform: translateZ(-150px) translateY(-50PX) translateX(-50px);
+				}
+				to{
+					transform: translateZ(-200px) translateY(-50PX) translateX(-50px);
+				}
+			}
+			@keyframes py3{
+				from{
+					transform:  rotateX(90deg) translatez(-100px) translateX(-50px);
+				}
+				to{
+					transform:  rotateX(90deg) translatez(-150px) translateX(-50px);
+				}
+			}
+			@keyframes py4{
+				from{
+					transform: rotateX(269deg) translatez(-200px) translateX(-50px);
+				}
+				to{
+					transform: rotateX(269deg) translatez(-250px) translateX(-50px);
+				}
+			}
+		@keyframes py5{
+			from{
+				transform: rotatey(270deg) translatez(200px) translateY(-50px); 
+			}
+			to{
+				transform: rotatey(270deg) translatez(250px) translateY(-50px); 
+			}
+		}
+			@keyframes py6{
+				from{
+					 transform: rotatey(270deg) translatez(-100px) translateY(-50px); 
+				}
+				to{
+					 transform: rotatey(270deg) translatez(-150px) translateY(-50px); 
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="a"></div>
+			<div class="a1"></div>
+			<div class="a2"></div>
+			<div class="a3"></div>
+			<div class="a4"></div>
+			<div class="a5"></div>
+			<div class="b"></div>
+			<div class="b1"></div>
+			<div class="b2"></div>
+			<div class="b3"></div>
+			<div class="b4"></div>
+			<div class="b5"></div>
+		</div>
+	</body>
+</html>

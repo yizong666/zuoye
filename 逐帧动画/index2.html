@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>逐帧动画2</title>
+		<style>
+			.box{
+				height:681px;
+				width:662px;
+				background: url(img/jd.png) top no-repeat;
+				animation: jd 3s steps(3) infinite;
+				
+			}
+			@keyframes jd{
+				from{
+					background-position: 0 0;
+				}
+				to{
+					background-position: 0 -2048px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

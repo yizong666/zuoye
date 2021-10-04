@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>逐帧动画4</title>
+		<style>
+			.box{
+				height:140px;
+				width:140px;
+				background: url(img/run.png)no-repeat;
+				animation: kt 3s steps(12) infinite;
+			}
+			@keyframes kt{
+				from{
+					background-position: 0 0;
+				}
+				to{
+					background-position: -1680px 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
